@@ -3,10 +3,10 @@
 VERSION="v1.30.0"
 ARCH="amd64"
 
-curl -L https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-${VERSION}-linux-${ARCH}.tar.gz --output crictl-${VERSION}-linux-${ARCH}.tar.gz
+sudo curl -L https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-${VERSION}-linux-${ARCH}.tar.gz --output crictl-${VERSION}-linux-${ARCH}.tar.gz
 
 sudo tar zxvf crictl-$VERSION-linux-${ARCH}.tar.gz -C /usr/local/bin
-rm -f crictl-$VERSION-linux-${ARCH}.tar.gz
+sudo rm -f crictl-$VERSION-linux-${ARCH}.tar.gz
 # crictl(Container Runtime Interface Control) 
 # : Containerd와 같은 컨테이너 런타임과 직접 통신 가능한 커맨드라인 도구
 ## - docker cli라고 생각하면됨(docker가 아닌 containerd이기에 crictl 사용)

@@ -5,12 +5,11 @@ mkdir -p ~/kubeadm && cd ~/kubeadm
 #-----------------------------------------------
 # kubernetes 다운로드 key 와 url 등록
 #-----------------------------------------------
-KUBE_VERSION="v1.30"
-curl -fsSL https://pkgs.k8s.io/core:/stable:/${KUBE_VERSION}/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+sudo curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 # kubernetes 패키지 검증을 위한 GPG 키 등록
 # .gpg로 변환하여 APT가 사용 가능케 함
 
-echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/${VERSION}/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 # Kubernetes 공식 API 저장소 URL 추가
 sudo apt-get update
 

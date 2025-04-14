@@ -9,7 +9,7 @@ sudo systemctl disable apparmor.service
 ## AppArmor : 리눅스의 프로세스별 접근 제어 보안 모듈
 ## 특정 바이너리 or 서비스가 시스템 리소스에 접근하는 것 제한.
 ## => 제약을 없애기 위해 종료
-sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ## 부팅시 Swap 자동 마운트 방지
 sudo swapoff -a
 ## Kubernetes가 노드에 자원할당을 정확하게 수행하기 위해 종료
