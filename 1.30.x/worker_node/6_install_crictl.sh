@@ -1,3 +1,5 @@
+#!/bin/bash
+
 VERSION="v1.30.0"
 ARCH="amd64"
 

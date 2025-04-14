@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 # apt-transport-https : HTTPS를 통해 APT 저장소 사용 가능

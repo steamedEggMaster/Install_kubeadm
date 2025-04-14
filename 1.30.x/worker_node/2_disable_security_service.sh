@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo systemctl stop ufw
 sudo systemctl disable ufw
 ## ufw(Uncomplicated Firewall) : Ubuntu의 기본 방화벽
